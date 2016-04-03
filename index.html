@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html data-ng-app="DemoApp">
+
+  <head>
+
+    <!-- Angulars Material CSS using RawGit to load directly from `bower-material/master` -->
+    <!--<link rel="stylesheet" href="https://rawgit.com/angular/bower-material/master/angular-material.css">-->
+    <link rel="stylesheet" href="https://rawgit.com/angular/bower-material/5d70169b6147dc15144d3f85a929a9ac3f429584/angular-material.css">
+    <script>
+      document.write('<base href="' + document.location + '" />');
+    </script>
+        <!-- Angular Material Dependencies -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-animate.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.13/angular-aria.js"></script>
+
+    <!-- Angular Material Javascript using RawGit to load directly from `bower-material/master` -->
+    <!--<script src="https://rawgit.com/angular/bower-material/master/angular-material.js"></script>-->
+    <script src="https://rawgit.com/angular/bower-material/5d70169b6147dc15144d3f85a929a9ac3f429584/angular-material.js"></script>
+    <script src="script.js"></script>
+    <style>p { font-size: 0.75em; }</style>
+  </head>
+  <body data-ng-controller="MainCtrl">
+    <h1>md-select demo</h1>
+   	<md-select ng-model="type" >
+  		<md-option ng-value="k" data-ng-repeat="(k,v) in analytics">{{ k }}</md-option>
+  	</md-select>
+  		<md-select ng-model="metrics" >
+  	   <md-option ng-value="t" data-ng-repeat="t in level2">{{ t }}</md-option>
+  	</md-select>
+  	
+  	 
+  </body>
+</html>
